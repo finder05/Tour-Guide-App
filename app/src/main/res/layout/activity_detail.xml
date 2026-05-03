@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- activity_detail.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5F5F5">
+
+    <!-- ============================= -->
+    <!-- 1. PURPLE HEADER BAR         -->
+    <!-- ============================= -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="#7E57C2"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="4dp"
+        android:paddingEnd="16dp"
+        android:elevation="4dp">
+
+        <!-- Back Button -->
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@android:drawable/ic_media_previous"
+            android:tint="#FFFFFF"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Back" />
+
+        <!-- Screen Title -->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Munnar"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginStart="8dp" />
+
+        <!-- Favorite Icon (top right) -->
+        <ImageButton
+            android:id="@+id/btnFavHeader"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@android:drawable/btn_star_big_off"
+            android:tint="#FFFFFF"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Favorite" />
+
+    </LinearLayout>
+
+    <!-- ============================= -->
+    <!-- SCROLLABLE CONTENT            -->
+    <!-- ============================= -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- ============================= -->
+            <!-- HERO IMAGE BANNER            -->
+            <!-- ============================= -->
+            <ImageView
+                android:id="@+id/imgPlace"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:src="@android:drawable/ic_menu_gallery"
+                android:background="#D1C4E9"
+                android:scaleType="centerInside"
+                android:padding="40dp"
+                android:contentDescription="Munnar" />
+
+            <!-- ============================= -->
+            <!-- 2. PLACE INFO SECTION        -->
+            <!-- ============================= -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:background="#FFFFFF">
+
+                <!-- Place Name -->
+                <TextView
+                    android:id="@+id/tvPlaceName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Munnar"
+                    android:textSize="24sp" />
+
+                <!-- Location -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="4dp">
+
+                    <ImageView
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:src="@android:drawable/ic_menu_mylocation"
+                        android:tint="#9E9E9E" />
+
+                    <TextView
+                        android:id="@+id/tvLocation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Idukki, Kerala"
+                        android:textSize="14sp"/>
+
+                </LinearLayout>
+
+                <!-- Best Season Badge -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="#EDE7F6"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp"
+                    android:layout_marginTop="10dp">
+
+                    <ImageView
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:src="@android:drawable/ic_menu_today"
+                        android:tint="#7E57C2" />
+
+                    <TextView
+                        android:id="@+id/tvSeason"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Best Season: Summer"
+                        android:textSize="13sp" />
+
+                </LinearLayout>
+
+                <!-- Divider -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#E0E0E0"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginBottom="12dp" />
+
+                <!-- Description -->
+                <TextView
+                    android:id="@+id/tvDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Munnar is a beautiful hill station..."
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <!-- Spacer -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:background="#F5F5F5" />
+
+            <!-- ============================= -->
+            <!-- 3. GUIDELINES SECTION        -->
+            <!-- ============================= -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:background="#FFFFFF">
+
+                <!-- Section Header -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="12dp">
+
+                    <View
+                        android:layout_width="4dp"
+                        android:layout_height="20dp"
+                        android:background="#7E57C2"
+                        android:layout_marginEnd="8dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Travel Guidelines"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        android:textColor="#212121" />
+
+                </LinearLayout>
+
+                <!-- Guideline Items -->
+                <!-- Item 1 -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="10dp" android:gravity="top">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="•" android:textColor="#7E57C2" android:textSize="18sp" android:layout_marginEnd="8dp"/>
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Carry light woolens as evenings can be cold" android:textSize="14sp" android:textColor="#424242" android:lineSpacingExtra="3dp"/>
+                </LinearLayout>
+
+                <!-- Item 2 -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="10dp" android:gravity="top">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="•" android:textColor="#7E57C2" android:textSize="18sp" android:layout_marginEnd="8dp"/>
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Visit Eravikulam National Park for Nilgiri Tahr sightings" android:textSize="14sp" android:textColor="#424242" android:lineSpacingExtra="3dp"/>
+                </LinearLayout>
+
+                <!-- Item 3 -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="10dp" android:gravity="top">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="•" android:textColor="#7E57C2" android:textSize="18sp" android:layout_marginEnd="8dp"/>
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Try freshly brewed local Kerala tea at the estates" android:textSize="14sp" android:textColor="#424242" android:lineSpacingExtra="3dp"/>
+                </LinearLayout>
+
+                <!-- Item 4 -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="10dp" android:gravity="top">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="•" android:textColor="#7E57C2" android:textSize="18sp" android:layout_marginEnd="8dp"/>
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Wear sturdy trekking shoes for trail walks" android:textSize="14sp" android:textColor="#424242" android:lineSpacingExtra="3dp"/>
+                </LinearLayout>
+
+                <!-- Item 5 -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="10dp" android:gravity="top">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="•" android:textColor="#7E57C2" android:textSize="18sp" android:layout_marginEnd="8dp"/>
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Carry a compact umbrella for sudden rain showers" android:textSize="14sp" android:textColor="#424242" android:lineSpacingExtra="3dp"/>
+                </LinearLayout>
+
+                <!-- Item 6 -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="10dp" android:gravity="top">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="•" android:textColor="#7E57C2" android:textSize="18sp" android:layout_marginEnd="8dp"/>
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Respect wildlife — do not feed or disturb animals" android:textSize="14sp" android:textColor="#424242" android:lineSpacingExtra="3dp"/>
+                </LinearLayout>
+
+                <!-- Item 7 -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="10dp" android:gravity="top">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="•" android:textColor="#7E57C2" android:textSize="18sp" android:layout_marginEnd="8dp"/>
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Book accommodation in advance during peak season" android:textSize="14sp" android:textColor="#424242" android:lineSpacingExtra="3dp"/>
+                </LinearLayout>
+
+                <!-- Item 8 -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="0dp" android:gravity="top">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="•" android:textColor="#7E57C2" android:textSize="18sp" android:layout_marginEnd="8dp"/>
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Do not litter — keep the hills clean and green" android:textSize="14sp" android:textColor="#424242" android:lineSpacingExtra="3dp"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Spacer -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:background="#F5F5F5" />
+
+            <!-- ============================= -->
+            <!-- 4. ACTION BUTTONS SECTION    -->
+            <!-- ============================= -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:background="#FFFFFF">
+
+                <!-- Button 1: Open in Google Maps (Filled) -->
+                <Button
+                    android:id="@+id/btnOpenMaps"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="OPEN IN GOOGLE MAPS"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:backgroundTint="#7E57C2"
+                    android:layout_marginBottom="12dp" />
+
+                <!-- Button 2: Add to Favorites (Outlined) -->
+                <Button
+                    android:id="@+id/btnFavorite"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="ADD TO FAVORITES"
+                    android:textColor="#7E57C2"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_marginBottom="8dp" />
+
+            </LinearLayout>
+
+            <!-- Bottom padding space -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="16dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
